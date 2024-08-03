@@ -31,7 +31,7 @@
                         <img src="{{ cart_item.product.images.url }}" class="img-sm" />
                       </div>
                       <figcaption class="info">
-                        <a href="#" class="title text-dark">{{ cart_item.product.product_name }}</a>
+                        <a href="{{ cart_item.product.get_url }}" class="title text-dark">{{ cart_item.product.product_name }}</a>
                         <p class="text-muted small">
                           color: 25 Mpx <br />
                           size: Canon
@@ -93,7 +93,7 @@
                 <img src="{% static './images/misc/payments.png' %}" height="26" />
               </p>
               <a href="./place-order.html" class="btn btn-primary btn-block">Checkout</a>
-              <a href="./store.html" class="btn btn-light btn-block">Continue Shopping</a>
+              <a href="{% url 'store' %}" class="btn btn-light btn-block">Continue Shopping</a>
             </div>
             <!-- card-body.// -->
           </div>
